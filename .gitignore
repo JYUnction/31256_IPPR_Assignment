@@ -163,3 +163,9 @@ cython_debug/
 
 256_ObjectCategories.tar
 /256_ObjectCategories
+
+*.cfg
+*.weights
+
+/pulled_images
+/yolo_dataset
