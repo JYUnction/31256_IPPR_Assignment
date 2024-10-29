@@ -23,19 +23,4 @@ with open(input_file, 'r') as f:
             shutil.copytree(source_folder, dest_folder)
             print(f"Copied {folder_name} to {new_folder_name}")
 
-            # Rename the image files inside the new folder
-            for img_file in os.listdir(dest_folder):
-                if img_file.endswith('.jpg'):  # Assuming images are .jpg
-                    # Extract the old category name from the image filename
-                    old_category = img_file.split('_')[0]  # This assumes the format is like 001_xxxx.jpg
-                    
-                    # Create the new filename based on the new folder name
-                    new_img_file = img_file.replace(old_category, str(i + 1).zfill(3))  # Update old category with new number
-                    old_img_path = os.path.join(dest_folder, img_file)
-                    new_img_path = os.path.join(dest_folder, new_img_file)
-
-                    # Rename the image file
-                    os.rename(old_img_path, new_img_path)
-                    print(f"Renamed {img_file} to {new_img_file} in {new_folder_name}")
-
-print("Folders copied and renamed, along with updated image filenames.")
+print("Folders copied and renamed in sequence.")
