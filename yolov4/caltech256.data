@@ -1,0 +1,5 @@
+classes = 256
+train = train.txt
+valid = test.txt
+names = caltech256.names
+backup = backup/  # where the weights will be saved during training
