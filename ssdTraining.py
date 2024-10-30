@@ -10,7 +10,7 @@ transform = transforms.Compose([
 ])
 
 # Load dataset
-dataset = ImageFolder(root='path/to/dataset', transform=transform)
+dataset = ImageFolder(root='256_ObjectCategories', transform=transform)
 dataloader = DataLoader(dataset, batch_size=4, shuffle=True)
 
 # Load SSD model pre-trained on COCO
